@@ -29,25 +29,25 @@
             <form action="">
                 <div class="form-group">
                     <div class="row">
-                        <label for="" class="control-label col-md-5">数据来源：</label>
-                        <select name="" id="" class="form-control col-md-7">
-                            <option value="">58同城房源</option>
-                            <option value="">58同城个人房源</option>
-                            <option value="">安居客房源</option>
+                        <label for="data-source" class="control-label col-md-5">数据来源：</label>
+                        <select name="" id="data-source" class="form-control col-md-7">
+                            <option value="1">58同城房源</option>
+                            <option value="2">58同城个人房源</option>
+                            <option value="3">安居客房源</option>
                         </select>
                     </div>
                     <div class="row">
                         <label class="control-label col-md-5">价格：</label>
-                        <input type="text" class="form-control col-md-3" />
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="low-price" class="form-control col-md-3">
                         <label>-</label>
-                        <input type="text" class="form-control col-md-3" />
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" id="high-price" class="form-control col-md-3">
                     </div>
                     <div class="row">
                         <label for="workplace" class="control-label col-md-5">工作地点：</label>
                         <input type="text" class="form-control col-md-7" id="workplace">
                     </div>
                     <div class="row">
-                            <button type="submit" class="btn btn-primary col-md-5">查找</button>
+                            <button type="submit" class="btn btn-primary col-md-5" id="submit-data">查找</button>
                     </div>
                 </div>
             </form>
@@ -96,3 +96,43 @@
     </div>
 </body>
 </html>
+<script>
+    var map = new BMap.Map("l-map");
+    map.centerAndZoom(new BMap.Point(121.473299,31.241243), 19);
+    map.enableScrollWheelZoom(true);
+    var index = 0;
+    var myGeo = new BMap.Geocoder();
+    var adds = [
+        "包河区金寨路1号（金寨路与望江西路交叉口）",
+        "庐阳区凤台路209号（凤台路与蒙城北路交叉口）",
+        "蜀山区金寨路217号(近安医附院公交车站)",
+        "蜀山区梅山路10号(近安徽饭店) ",
+        "蜀山区 长丰南路159号铜锣湾广场312室",
+        "合肥市寿春路93号钱柜星乐町KTV（逍遥津公园对面）",
+        "庐阳区长江中路177号",
+        "新站区胜利路89"
+    ];
+    function bdGEO(){
+        var add = adds[index];
+        geocodeSearch(add);
+        index++;
+    }
+    function geocodeSearch(add){
+        if(index < adds.length){
+            setTimeout(window.bdGEO,400);
+        }
+        myGeo.getPoint(add, function(point){
+            if (point) {
+                document.getElementById("result").innerHTML +=  index + "、" + add + ":" + point.lng + "," + point.lat + "</br>";
+                var address = new BMap.Point(point.lng, point.lat);
+                addMarker(address,new BMap.Label(index+":"+add,{offset:new BMap.Size(20,-10)}));
+            }
+        }, "合肥市");
+    }
+    // 编写自定义函数,创建标注
+    function addMarker(point,label){
+        var marker = new BMap.Marker(point);
+        map.addOverlay(marker);
+        marker.setLabel(label);
+    }
+</script>
