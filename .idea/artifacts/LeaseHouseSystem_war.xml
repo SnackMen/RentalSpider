@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="LeaseHouseSystem:war">
+    <output-path>$PROJECT_DIR$/LeaseHouseSystem/target</output-path>
+    <root id="archive" name="spring.war">
+      <element id="artifact" artifact-name="LeaseHouseSystem:war exploded" />
+    </root>
+  </artifact>
+</component>
