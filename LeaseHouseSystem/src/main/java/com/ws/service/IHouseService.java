@@ -1,6 +1,8 @@
 package com.ws.service;
 
+import com.ws.dto.DataQueryVOPage;
 import com.ws.dto.HouseDTO;
+import com.ws.dto.SearchCriteriaDTO;
 
 
 /**
@@ -8,9 +10,7 @@ import com.ws.dto.HouseDTO;
  */
 public interface IHouseService {
 
-    HouseDTO[] searchAll(String type);
-
-    HouseDTO[] searchByPrice(int price);
+    DataQueryVOPage[] searchAll(SearchCriteriaDTO searchCriteriaDTO);
 
     void searchById(int id);
 }

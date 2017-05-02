@@ -1,6 +1,8 @@
 package com.ws.dao;
 
+import com.ws.dto.DataQueryVOPage;
 import com.ws.dto.HouseDTO;
+import com.ws.dto.SearchCriteriaDTO;
 
 import java.util.List;
 
@@ -9,13 +11,11 @@ import java.util.List;
  */
 public interface IHouseDAO {
 
-    List<HouseDTO> searchFiveEightAll();
+    DataQueryVOPage[] searchFiveEight(SearchCriteriaDTO searchCriteriaDTO);
 
-    List<HouseDTO> searchFiveEightPersonalAll();
+    DataQueryVOPage[] searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO);
 
-    List<HouseDTO> searchFiveEightByPrice(String price, String personal, boolean isAnjuke);
-
-    List<HouseDTO> searchAnJuKe();
+    DataQueryVOPage[] searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO);
 
     void getId(int id);
 

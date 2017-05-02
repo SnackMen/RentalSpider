@@ -1,6 +1,8 @@
 package com.ws.dao;
 
+import com.ws.dto.DataQueryVOPage;
 import com.ws.dto.HouseDTO;
+import com.ws.dto.SearchCriteriaDTO;
 import com.ws.mapper.HouseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -18,9 +20,6 @@ import java.util.List;
 @Repository
 public class HouseDAOImpl  implements IHouseDAO {
 
-
-
-
     private JdbcTemplate jdbcTemplate;
 
     private List<HouseDTO> houseDTO = new ArrayList<>();
@@ -30,30 +29,20 @@ public class HouseDAOImpl  implements IHouseDAO {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+
     @Override
-    public List<HouseDTO> searchFiveEightAll() {
-        try{
-            String SQL = "select * from 58housedata where rental_house_link like '%58%'";
-            houseDTO = jdbcTemplate.query(SQL,new HouseMapper());
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return houseDTO;
+    public DataQueryVOPage[] searchFiveEight(SearchCriteriaDTO searchCriteriaDTO) {
+        return new DataQueryVOPage[0];
     }
 
     @Override
-    public List<HouseDTO> searchFiveEightPersonalAll() {
-        return null;
+    public DataQueryVOPage[] searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO) {
+        return new DataQueryVOPage[0];
     }
 
     @Override
-    public List<HouseDTO> searchFiveEightByPrice(String price, String personal, boolean isAnjuke) {
-        return null;
-    }
-
-    @Override
-    public List<HouseDTO> searchAnJuKe() {
-        return null;
+    public DataQueryVOPage[] searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO) {
+        return new DataQueryVOPage[0];
     }
 
     @Override
