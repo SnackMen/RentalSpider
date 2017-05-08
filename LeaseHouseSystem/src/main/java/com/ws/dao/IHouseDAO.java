@@ -11,11 +11,11 @@ import java.util.List;
  */
 public interface IHouseDAO {
 
-    DataQueryVOPage[] searchFiveEight(SearchCriteriaDTO searchCriteriaDTO);
+    DataQueryVOPage searchFiveEight(SearchCriteriaDTO searchCriteriaDTO);
 
-    DataQueryVOPage[] searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO);
+    DataQueryVOPage searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO);
 
-    DataQueryVOPage[] searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO);
+    DataQueryVOPage searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO);
 
     void getId(int id);
 

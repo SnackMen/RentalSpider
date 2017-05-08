@@ -27,10 +27,10 @@ public class Test {
 //        houseService.getId(12444);
 //        HouseServiceImpl houseService1 = new HouseServiceImpl();
 //        houseService.searchById(124444);
-        IHouseService houseService = new HouseServiceImpl();
-        HouseDTO[] houseDTOS = houseService.searchAll("58");
-        for(int i=0;i<10;i++) {
-            System.out.println(houseDTOS[i].toString());
-        }
+//        IHouseService houseService = new HouseServiceImpl();
+//        HouseDTO[] houseDTOS = houseService.searchAll("58");
+//        for(int i=0;i<10;i++) {
+//            System.out.println(houseDTOS[i].toString());
+//        }
     }
 }

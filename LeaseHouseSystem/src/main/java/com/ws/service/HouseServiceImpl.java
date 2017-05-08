@@ -38,7 +38,7 @@ public class HouseServiceImpl implements IHouseService {
 
 
     @Override
-    public DataQueryVOPage[] searchAll(SearchCriteriaDTO searchCriteriaDTO) {
+    public DataQueryVOPage searchAll(SearchCriteriaDTO searchCriteriaDTO) {
         if(searchCriteriaDTO.isAnjuke())
             return houseDAO.searchAnJuKe(searchCriteriaDTO);
         else if(searchCriteriaDTO.isPersonal())

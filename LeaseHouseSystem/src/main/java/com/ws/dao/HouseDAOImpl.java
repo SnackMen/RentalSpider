@@ -31,18 +31,18 @@ public class HouseDAOImpl  implements IHouseDAO {
 
 
     @Override
-    public DataQueryVOPage[] searchFiveEight(SearchCriteriaDTO searchCriteriaDTO) {
-        return new DataQueryVOPage[0];
+    public DataQueryVOPage searchFiveEight(SearchCriteriaDTO searchCriteriaDTO) {
+        return new DataQueryVOPage();
     }
 
     @Override
-    public DataQueryVOPage[] searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO) {
-        return new DataQueryVOPage[0];
+    public DataQueryVOPage searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO) {
+        return new DataQueryVOPage();
     }
 
     @Override
-    public DataQueryVOPage[] searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO) {
-        return new DataQueryVOPage[0];
+    public DataQueryVOPage searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO) {
+        return new DataQueryVOPage();
     }
 
     @Override

@@ -10,7 +10,7 @@ import com.ws.dto.SearchCriteriaDTO;
  */
 public interface IHouseService {
 
-    DataQueryVOPage[] searchAll(SearchCriteriaDTO searchCriteriaDTO);
+    DataQueryVOPage searchAll(SearchCriteriaDTO searchCriteriaDTO);
 
     void searchById(int id);
 }

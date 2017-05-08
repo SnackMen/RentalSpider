@@ -14,8 +14,6 @@ public class SearchCriteriaDTO {
 
     private String mapLevel;
 
-    private String ip;
-
     private boolean isAnjuke;
 
     private boolean isPersonal;
@@ -42,14 +40,6 @@ public class SearchCriteriaDTO {
 
     public void setMapLevel(String mapLevel) {
         this.mapLevel = mapLevel;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
     }
 
     public String getDataSource() {
