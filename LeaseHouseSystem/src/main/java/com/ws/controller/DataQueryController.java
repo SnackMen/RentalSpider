@@ -6,6 +6,8 @@ import com.ws.dto.SearchCriteriaDTO;
 import com.ws.dto.UserInfo;
 import com.ws.service.HouseServiceImpl;
 import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
+import net.sf.json.processors.JsDateJsonBeanProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 /**
  * Created by laowang on 17-5-2.
@@ -53,10 +56,14 @@ public class DataQueryController {
         searchCriteriaDTO.setPersonal(Boolean.valueOf(request.getParameter("isPersonal")));
         searchCriteriaDTO.setAnjuke(Boolean.valueOf(request.getParameter("isAnjuke")));
         DataQueryVOPage dataQueryVOPage = houseService.searchAll(searchCriteriaDTO);
-        HouseDTO[] houseDTOs = new HouseDTO[10];
-        dataQueryVOPage.setHouseDTOS(houseDTOs);
+//        HouseDTO[] houseDTOs = new HouseDTO[10];
+//        dataQueryVOPage.setHouseDTOS(houseDTOs);
+        List<HouseDTO> houseDTOList = dataQueryVOPage.getHouseDTOList();
+        System.out.println("***"+houseDTOList.size());
         dataQueryVOPage.setVisitQuantity(10);
-        JSONObject jsonObject = JSONObject.fromObject(dataQueryVOPage);
+        JsonConfig jsonConfig = new JsonConfig();
+        jsonConfig.registerJsonBeanProcessor(java.sql.Date.class, new JsDateJsonBeanProcessor());
+        JSONObject jsonObject = JSONObject.fromObject(dataQueryVOPage, jsonConfig);
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
         PrintWriter out = null;

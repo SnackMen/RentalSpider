@@ -1,6 +1,7 @@
 package com.ws.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by laowang on 17-5-2.
@@ -10,14 +11,14 @@ public class DataQueryVOPage implements Serializable {
 
     private int visitQuantity;
 
-    private HouseDTO[] houseDTOS;
+    private List<HouseDTO> houseDTOList;
 
-    public HouseDTO[] getHouseDTOS() {
-        return houseDTOS;
+    public List<HouseDTO> getHouseDTOList() {
+        return houseDTOList;
     }
 
-    public void setHouseDTOS(HouseDTO[] houseDTOS) {
-        this.houseDTOS = houseDTOS;
+    public void setHouseDTOList(List<HouseDTO> houseDTOList) {
+        this.houseDTOList = houseDTOList;
     }
 
     public int getVisitQuantity() {

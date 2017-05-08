@@ -53,7 +53,7 @@ public class MySQLDataConfiguration implements TransactionManagementConfigurer {
             dataSource.setJdbcUrl(url);
             dataSource.setUser(user);
             dataSource.setPassword(password);
-            dataSource.setMaxPoolSize(20);
+            dataSource.setMaxPoolSize(100);
         }catch (Exception e){
             e.printStackTrace();
         }

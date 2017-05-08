@@ -9,15 +9,14 @@ $(document).ready(function () {
 
     var mapHeight = $(document.body).height();
     $("#l-map").css("height",mapHeight);
-    dataSource = $("#data-source").val();
-    lowPrice = $('#low-price').val().trim();
-    highPrice = $('#high-price').val().trim();
-    workPlace = $('#workplace').val().trim();
-    mapLevel = map.getZoom();
-    if(dataSource === '1'){
-        isAnjuke = false;
-        isPersonal = false;
-    }else if(dataSource === '2'){
+    var dataSource = $("#data-source").val();
+    var lowPrice = $('#low-price').val().trim();
+    var highPrice = $('#high-price').val().trim();
+    var workPlace = $('#workplace').val().trim();
+    var mapLevel = map.getZoom();
+    var isAnjuke = false;
+    var isPersonal = false;
+    if(dataSource === '2'){
         isAnjuke = false;
         isPersonal = true;
     }else if(dataSource === '3'){
@@ -27,8 +26,7 @@ $(document).ready(function () {
 
     $.ajax({
         url:'/zhaofang',
-        type :'GET',
-        contentType: "application/json;charset=UTF-8",
+        type :'POST',
         data: {
             'dataSource' : dataSource,
             'lowPrice' : lowPrice,
@@ -41,42 +39,52 @@ $(document).ready(function () {
         success: function (data) {
             //请求成功，对数据进行处理
             console.log(data);
-            alert('成功');
+            // alert('成功');
         },
         error: function () {
             //请求失败，弹出框
-            alert('失败');
+            console.log("error");
+            // alert('失败');
         }
 
     });
     $("#submit-data").on("click", function () {
-        source.dataSource = $("#data-source").val();
-        source.lowPrice = $('#low-price').val().trim();
-        source.highPrice = $('#high-price').val().trim();
-        source.workPlace = $('#workplace').val().trim();
-        source.mapLevel = map.getZoom();
-        if(source.dataSource === '1'){
-            source.isAnjuke = false;
-            source.isPersonal = false;
-        }else if(source.dataSource === '2'){
-            source.isAnjuke = false;
-            source.isPersonal = true;
-        }else if(source.dataSource === '3'){
-            source.isAnjuke = true;
-            source.isPersonal = false;
+        dataSource = $("#data-source").val();
+        lowPrice = $('#low-price').val().trim();
+        highPrice = $('#high-price').val().trim();
+        workPlace = $('#workplace').val().trim();
+        mapLevel = map.getZoom();
+        if(dataSource === '1'){
+            isAnjuke = false;
+            isPersonal = false;
+        }else if(dataSource === '2'){
+            isAnjuke = false;
+            isPersonal = true;
+        }else if(dataSource === '3'){
+            isAnjuke = true;
+            isPersonal = false;
         }
         //ajax
         $.ajax({
-            url:'/getDetailData',
+            url:'/zhaofang',
             type :'POST',
-            data: source,
+            data: {
+                'dataSource' : dataSource,
+                'lowPrice' : lowPrice,
+                'highPrice' : highPrice,
+                'workPlace' : workPlace,
+                'mapLevel' : mapLevel,
+                'isAnjuke' : isAnjuke,
+                'isPersonal' : isPersonal
+            },
             success: function (data) {
                 //请求成功，对数据进行处理
-                alert('成功');
+                // alert('成功');
+                console.log(data);
             },
             error: function () {
                 //请求失败，弹出框
-                alert('失败');
+                console.log("error");
             }
 
         });
@@ -119,33 +127,43 @@ $(document).ready(function () {
         marker.setLabel(label);
     }
     map.addEventListener("zoomend", function(){
-        source.dataSource = $("#data-source").val();
-        source.lowPrice = $('#low-price').val().trim();
-        source.highPrice = $('#high-price').val().trim();
-        source.workPlace = $('#workplace').val().trim();
-        source.mapLevel = map.getZoom();
-        if(source.dataSource === '1'){
-            source.isAnjuke = false;
-            source.isPersonal = false;
-        }else if(source.dataSource === '2'){
-            source.isAnjuke = false;
-            source.isPersonal = true;
-        }else if(source.dataSource === '3'){
-            source.isAnjuke = true;
-            source.isPersonal = false;
+        dataSource = $("#data-source").val();
+        lowPrice = $('#low-price').val().trim();
+        highPrice = $('#high-price').val().trim();
+        workPlace = $('#workplace').val().trim();
+        mapLevel = map.getZoom();
+        if(dataSource === '1'){
+            isAnjuke = false;
+            isPersonal = false;
+        }else if(dataSource === '2'){
+            isAnjuke = false;
+            isPersonal = true;
+        }else if(dataSource === '3'){
+            isAnjuke = true;
+            isPersonal = false;
         }
         //发送ajax 请求
         $.ajax({
-            url:'/getDetailData',
+            url:'/zhaofang',
             type :'POST',
-            data: source,
+            data: {
+                'dataSource' : dataSource,
+                'lowPrice' : lowPrice,
+                'highPrice' : highPrice,
+                'workPlace' : workPlace,
+                'mapLevel' : mapLevel,
+                'isAnjuke' : isAnjuke,
+                'isPersonal' : isPersonal
+            },
             success: function (data) {
                 //请求成功，对数据进行处理
-                alert('成功');
+                console.log(data);
+                // alert('成功');
             },
             error: function () {
                 //请求失败，弹出框
-                alert('失败');
+                // alert('失败');
+                console.log("error");
             }
 
         });
