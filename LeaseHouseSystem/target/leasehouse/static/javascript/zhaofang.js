@@ -17,16 +17,20 @@ $(document).ready(function () {
         infoWindowAnchor: new BMap.Size(10, 0)
     });
     var greenIcon = new BMap.Icon('../../static/pic/green_location.png', new BMap.Size(24,36),{
-        anchor : new BMap.Size(10,30)
+        anchor : new BMap.Size(10,30),
+        infoWindowAnchor: new BMap.Size(10, 0)
     });
     var pinkIcon = new BMap.Icon('../../static/pic/pink_location.png', new BMap.Size(24,36),{
-        anchor : new BMap.Size(10,30)
+        anchor : new BMap.Size(10,30),
+        infoWindowAnchor: new BMap.Size(10, 0)
     });
     var redIcon = new BMap.Icon('../../static/pic/red_location.png', new BMap.Size(24,36),{
-        anchor : new BMap.Size(10,30)
+        anchor : new BMap.Size(10,30),
+        infoWindowAnchor: new BMap.Size(10, 0)
     });
     var yellowIcon = new BMap.Icon('../../static/pic/yellow_location.png', new BMap.Size(24,36),{
-        anchor : new BMap.Size(10,30)
+        anchor : new BMap.Size(10,30),
+        infoWindowAnchor: new BMap.Size(10, 0)
     });
 
     var mapHeight = $(document.body).height();
@@ -49,39 +53,42 @@ $(document).ready(function () {
         var marker = new BMap.Marker(point, {
             icon : icon
         });
-        marker.addEventListener("mouseover", function(){
+        marker.addEventListener("click", function(){
             this.openInfoWindow(infoWindow);
         });
         map.addOverlay(marker);
     }
     function bdGEO(){
         var add = adds[index].houseLocation;
+        var link = adds[index].houseLink;
+        var message = adds[index].houseMessage;
         var price = adds[index].housePrice;
-        if(parseInt(price) < 2000){
-            iconColor = greenIcon;
-        }
-        else if(parseInt(price) < 4000){
-            iconColor = blueIcon;
-        }
-        else if(parseInt(price) < 6000){
-            iconColor = yellowIcon;
-        }
-        else if(parseInt(price) < 8000){
-            iconColor = pinkIcon;
-        }
-        else
-            iconColor = redIcon;
-        geocodeSearch(add);
+        if(add !== null || add !== 'undefined')
+            geocodeSearch(add, link, message, price);
         index++;
     }
-    function geocodeSearch(add){
+    function geocodeSearch(add, link, message, price){
         if(index < adds.length){
             setTimeout(bdGEO,400);
         }
         myGeo.getPoint(add, function(point){
             if (point) {
-                var address = new BMap.Point(point.lng, point.lat);
-                addMarker(address, iconColor, new BMap.InfoWindow("<a href='https://www.baidu.com/'>显示内容</a>"));
+                if(parseInt(price) < 2000){
+                    var address = new BMap.Point(point.lng, point.lat);
+                    addMarker(address, greenIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                }else if(parseInt(price) < 4000){
+                    var address = new BMap.Point(point.lng, point.lat);
+                    addMarker(address, blueIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                }else if(parseInt(price) < 6000){
+                    var address = new BMap.Point(point.lng, point.lat);
+                    addMarker(address, yellowIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                }else if(parseInt(price) < 8000){
+                    var address = new BMap.Point(point.lng, point.lat);
+                    addMarker(address, pinkIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                }else{
+                    var address = new BMap.Point(point.lng, point.lat);
+                    addMarker(address, redIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                }
             }
         }, "上海市");
     }

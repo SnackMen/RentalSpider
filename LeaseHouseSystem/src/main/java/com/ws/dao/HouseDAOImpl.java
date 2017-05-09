@@ -7,12 +7,15 @@ import com.ws.dto.HouseDTO;
 import com.ws.dto.SearchCriteriaDTO;
 import com.ws.mapper.HouseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -42,9 +45,14 @@ public class HouseDAOImpl  implements IHouseDAO {
     @Override
     public DataQueryVOPage searchFiveEight(SearchCriteriaDTO searchCriteriaDTO) {
         int count = dataCount(searchCriteriaDTO.getMapLevel());
-        java.sql.Date date = DateFormat.format(new java.util.Date());
+        Calendar calendar=Calendar.getInstance();
+        calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
+        Date date1=calendar.getTime();//date就是你需要的时间
+        java.sql.Date date = DateFormat.format(date1);
+//        java.sql.Date date = DateFormat.format(new java.util.Date());
         List<HouseDTO> houseDTOs = new ArrayList<>();
         try {
+            System.out.println("select");
             String SQL = "SELECT * FROM 58housedata WHERE rental_house_date='" + date + "' LIMIT 0," + count;
             houseDTOs = jdbcTemplate.query(SQL, new HouseMapper());
         }catch (Exception e){

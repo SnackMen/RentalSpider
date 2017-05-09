@@ -9,9 +9,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.0.RELEASE" />
@@ -32,15 +30,20 @@
           <element id="library" level="project" name="Maven: redis.clients:jedis:2.0.0" />
           <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.5.5" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-redis:1.0.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:6.0.3" />
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.2" />
+          <element id="library" level="project" name="Maven: net.sf.ehcache:ehcache-core:2.6.11" />
+          <element id="library" level="project" name="Maven: com.googlecode.ehcache-spring-annotations:ehcache-spring-annotations:1.2.0" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:r09" />
           <element id="library" level="project" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
           <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.2.1" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
           <element id="library" level="project" name="Maven: net.sf.ezmorph:ezmorph:1.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.0.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

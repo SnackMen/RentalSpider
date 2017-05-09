@@ -5,6 +5,7 @@ import com.ws.dto.HouseDTO;
 import com.ws.dto.SearchCriteriaDTO;
 import com.ws.dto.UserInfo;
 import com.ws.service.HouseServiceImpl;
+import com.ws.service.IHouseService;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsDateJsonBeanProcessor;
@@ -28,8 +29,10 @@ import java.util.List;
  */
 @Controller
 public class DataQueryController {
+//    @Autowired
+//    HouseServiceImpl houseService;
     @Autowired
-    HouseServiceImpl houseService;
+    IHouseService houseService;
 
 //    @RequestMapping(value = "/zhaofang", method = RequestMethod.GET)
 //    public String index(Model model){

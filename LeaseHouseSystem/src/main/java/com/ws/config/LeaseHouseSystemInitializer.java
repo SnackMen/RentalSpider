@@ -8,7 +8,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class LeaseHouseSystemInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[]{webXMLConfig.class,MySQLDataConfiguration.class};
+        return new Class<?>[]{webXMLConfig.class,MySQLDataConfiguration.class,CachingConfig.class};
     }
 
     @Override
