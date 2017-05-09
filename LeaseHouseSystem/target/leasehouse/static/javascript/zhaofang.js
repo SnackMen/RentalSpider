@@ -9,7 +9,6 @@ $(document).ready(function () {
     var myGeo = new BMap.Geocoder();
     var adds;
     var index = 0;
-    var iconColor;
 
     /*show icon*/
     var blueIcon = new BMap.Icon('../../static/pic/blue_location.png', new BMap.Size(24,36),{
@@ -59,17 +58,19 @@ $(document).ready(function () {
         map.addOverlay(marker);
     }
     function bdGEO(){
-        var add = adds[index].houseLocation;
-        var link = adds[index].houseLink;
-        var message = adds[index].houseMessage;
-        var price = adds[index].housePrice;
+        if(index < adds.length){
+            var add = adds[index].houseLocation;
+            var link = adds[index].houseLink;
+            var message = adds[index].houseMessage;
+            var price = adds[index].housePrice;
+        }
         if(add !== null || add !== 'undefined')
             geocodeSearch(add, link, message, price);
         index++;
     }
     function geocodeSearch(add, link, message, price){
         if(index < adds.length){
-            setTimeout(bdGEO,400);
+            setTimeout(bdGEO,300);
         }
         myGeo.getPoint(add, function(point){
             if (point) {
@@ -164,6 +165,8 @@ $(document).ready(function () {
                 //请求成功，对数据进行处理
                 // alert('成功');
                 console.log(data);
+                adds = data.houseDTOList;
+                bdGEO();
             },
             error: function () {
                 //请求失败，弹出框
@@ -241,6 +244,9 @@ $(document).ready(function () {
             success: function (data) {
                 //请求成功，对数据进行处理
                 console.log(data);
+                index = 0;
+                adds = data.houseDTOList;
+                bdGEO();
                 // alert('成功');
             },
             error: function () {

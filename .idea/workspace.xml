@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="216f588b-048c-44a6-9dd7-03a751a09934" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/CachingConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/resources/ehcache.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_1_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/lib/spring-context-support-3.1.0.RELEASE.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/config/LeaseHouseSystemInitializer.class" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/config/LeaseHouseSystemInitializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/dao/HouseDAOImpl.class" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/dao/HouseDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/service/HouseServiceImpl.class" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/service/HouseServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/LeaseHouseSystem_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/LeaseHouseSystem_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/LeaseHouseSystem.iml" afterPath="$PROJECT_DIR$/LeaseHouseSystem/LeaseHouseSystem.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/pom.xml" afterPath="$PROJECT_DIR$/LeaseHouseSystem/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/LeaseHouseSystemInitializer.java" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/LeaseHouseSystemInitializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/controller/DataQueryController.java" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/controller/DataQueryController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/service/HouseServiceImpl.java" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/service/HouseServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/static/javascript/zhaofang.js" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/static/javascript/zhaofang.js" />
     </list>
     <ignored path="RentalSpider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,54 +63,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="zhaofang.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="zhaofang.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+            <state relative-caret-position="456">
+              <caret line="246" column="26" lean-forward="false" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
               <folding>
-                <element signature="e#5354#6577#0" expanded="false" />
-                <element signature="e#7867#9127#0" expanded="false" />
-                <marker date="1494319171084" expanded="true" signature="4774:4802" ph="..." />
+                <marker date="1494328869641" expanded="true" signature="4814:4842" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webXMLConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/webXMLConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-822">
-              <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LeaseHouseSystemInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/LeaseHouseSystemInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
-              <folding>
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HouseDAOImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HouseDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="211">
+              <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1494317288589" expanded="true" signature="1747:1797" ph="SELECT * FRO... 58housedata" />
-                <marker date="1494317288589" expanded="true" signature="1747:1820" ph="SELECT * FRO... 58housedate" />
-                <marker date="1494317288589" expanded="true" signature="2685:2728" ph="select * fro... 58housedata" />
+                <element signature="e#3923#3924#0" expanded="true" />
+                <element signature="e#3967#3968#0" expanded="true" />
+                <marker date="1494329063068" expanded="true" signature="3097:3147" ph="SELECT * FRO... 58housedata" />
+                <marker date="1494329063068" expanded="true" signature="3097:3170" ph="SELECT * FRO... 58housedate" />
+                <marker date="1494329063068" expanded="true" signature="4055:4098" ph="select * fro... 58housedata" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchCriteriaDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dto/SearchCriteriaDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -277,8 +248,8 @@
         <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/CachingConfig.java" />
         <option value="$PROJECT_DIR$/LeaseHouseSystem/pom.xml" />
         <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/service/HouseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" />
         <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js" />
+        <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -2046,12 +2017,12 @@
       <workItem from="1494212390706" duration="11993000" />
       <workItem from="1494235420528" duration="14198000" />
       <workItem from="1494296336516" duration="830000" />
-      <workItem from="1494298934120" duration="9630000" />
+      <workItem from="1494298934120" duration="16867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168641000" />
+    <option name="totallyTimeSpent" value="175878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2063,7 +2034,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1056" extended-state="7" />
+    <frame x="-1" y="0" width="1922" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2072,11 +2043,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.5021299" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14164004" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2303433" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39534885" sideWeight="0.49573562" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29264393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29233226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24840085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2090,7 +2061,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33481154" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32815966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25581396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23588924" sideWeight="0.49006623" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23454158" sideWeight="0.50993377" order="3" side_tool="true" content_ui="tabs" />
@@ -2169,19 +2140,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java</url>
-          <line>55</line>
+          <line>86</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java</url>
-          <line>56</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java</url>
-          <line>51</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -2392,13 +2363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dto/SearchCriteriaDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/mapper/HouseMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -2509,14 +2473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/webXMLConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-822">
-          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -2541,19 +2497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="54" column="38" lean-forward="false" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1494317288589" expanded="true" signature="1747:1797" ph="SELECT * FRO... 58housedata" />
-            <marker date="1494317288589" expanded="true" signature="1747:1820" ph="SELECT * FRO... 58housedate" />
-            <marker date="1494317288589" expanded="true" signature="2685:2728" ph="select * fro... 58housedata" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/resources/ehcache.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -2570,14 +2513,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config/webXMLConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-669">
+          <caret line="8" column="52" lean-forward="false" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dto/SearchCriteriaDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+        <state relative-caret-position="456">
+          <caret line="246" column="26" lean-forward="false" selection-start-line="246" selection-start-column="26" selection-end-line="246" selection-end-column="26" />
           <folding>
-            <element signature="e#5354#6577#0" expanded="false" />
-            <element signature="e#7867#9127#0" expanded="false" />
-            <marker date="1494319171084" expanded="true" signature="4774:4802" ph="..." />
+            <marker date="1494328869641" expanded="true" signature="4814:4842" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="34" column="41" lean-forward="false" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3923#3924#0" expanded="true" />
+            <element signature="e#3967#3968#0" expanded="true" />
+            <marker date="1494329063068" expanded="true" signature="3097:3147" ph="SELECT * FRO... 58housedata" />
+            <marker date="1494329063068" expanded="true" signature="3097:3170" ph="SELECT * FRO... 58housedate" />
+            <marker date="1494329063068" expanded="true" signature="4055:4098" ph="select * fro... 58housedata" />
           </folding>
         </state>
       </provider>

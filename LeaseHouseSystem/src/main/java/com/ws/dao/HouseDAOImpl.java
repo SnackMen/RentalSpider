@@ -26,6 +26,22 @@ public class HouseDAOImpl  implements IHouseDAO {
 
     private JdbcTemplate jdbcTemplate;
 
+    private final String HOUSE_PRICE = "AND rental_house_price";
+
+    private final String LOW_PRICE = " >= # ";
+
+    private final String AND = "AND";
+
+    private final String HIGH_PRICE = " < # ";
+
+    private final String WORK_PLACE = "AND rental_";
+
+    private final String MAIN_SQL = "SELECT * FROM 58housedata WHERE ";
+
+    private final String RENTAL_DATE = "rental_house_date='#' ";
+
+    private final String COUNT = "LIMIT 0,#";
+
     private List<HouseDTO> houseDTO = new ArrayList<>();
 
     private ComboPooledDataSource dataSource;
@@ -45,16 +61,31 @@ public class HouseDAOImpl  implements IHouseDAO {
     @Override
     public DataQueryVOPage searchFiveEight(SearchCriteriaDTO searchCriteriaDTO) {
         int count = dataCount(searchCriteriaDTO.getMapLevel());
+        count *= 0.01;
         Calendar calendar=Calendar.getInstance();
         calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
         Date date1=calendar.getTime();//date就是你需要的时间
         java.sql.Date date = DateFormat.format(date1);
 //        java.sql.Date date = DateFormat.format(new java.util.Date());
         List<HouseDTO> houseDTOs = new ArrayList<>();
+        String lowPrice = searchCriteriaDTO.getLowPrice();
+        String highPrice = searchCriteriaDTO.getHighPrice();
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(MAIN_SQL).append(RENTAL_DATE.replace("#",date.toString()));
+        if(lowPrice != null && !"".equals(lowPrice)){
+            stringBuffer.append(HOUSE_PRICE);
+            if(highPrice != null && !"".equals(highPrice))
+                stringBuffer.append(LOW_PRICE.replace("#",lowPrice)).append(HOUSE_PRICE).append(HIGH_PRICE.replace("#",highPrice));
+            else
+                stringBuffer.append(LOW_PRICE.replace("#",lowPrice));
+        }else if(highPrice != null && !"".equals(highPrice)){
+            stringBuffer.append(HOUSE_PRICE).append(HIGH_PRICE.replace("#",highPrice));
+        }
+        stringBuffer.append(COUNT.replace("#",String.valueOf(count)));
+        System.out.println(stringBuffer.toString());
         try {
-            System.out.println("select");
-            String SQL = "SELECT * FROM 58housedata WHERE rental_house_date='" + date + "' LIMIT 0," + count;
-            houseDTOs = jdbcTemplate.query(SQL, new HouseMapper());
+//            String SQL = "SELECT * FROM 58housedata WHERE rental_house_date='" + date + "' LIMIT 0," + count;
+            houseDTOs = jdbcTemplate.query(stringBuffer.toString(), new HouseMapper());
         }catch (Exception e){
             e.printStackTrace();
         }
