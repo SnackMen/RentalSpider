@@ -38,6 +38,7 @@ public class CrawlPageProgress implements PageProcessor {
             .addCookie("aQQ_ajkguid","1D2AE2E0-4F11-90B3-175E-2418E51AF235")
             .addCookie("expires","Mon")
             .addCookie("Max-Age","31622400");
+
     private ConnectToDomain connectToDomain = new ConnectToDomain();
 
     private int personal = 0;

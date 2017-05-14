@@ -9,6 +9,9 @@ $(document).ready(function () {
     var myGeo = new BMap.Geocoder();
     var adds;
     var index = 0;
+    var location = 0;
+    var level = 9;
+    var centerPoint;
 
     /*show icon*/
     var blueIcon = new BMap.Icon('../../static/pic/blue_location.png', new BMap.Size(24,36),{
@@ -74,24 +77,61 @@ $(document).ready(function () {
         }
         myGeo.getPoint(add, function(point){
             if (point) {
-                if(parseInt(price) < 2000){
-                    var address = new BMap.Point(point.lng, point.lat);
-                    addMarker(address, greenIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
-                }else if(parseInt(price) < 4000){
-                    var address = new BMap.Point(point.lng, point.lat);
-                    addMarker(address, blueIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
-                }else if(parseInt(price) < 6000){
-                    var address = new BMap.Point(point.lng, point.lat);
-                    addMarker(address, yellowIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
-                }else if(parseInt(price) < 8000){
-                    var address = new BMap.Point(point.lng, point.lat);
-                    addMarker(address, pinkIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                if(workPlace!== null && workPlace!== '' && centerPoint !== null && centerPoint!== 'undefined'){
+                    console.log(workPlace);
+                    console.log(centerPoint);
+                    if(getDistance(centerPoint, point) <= 6000){
+                        if(parseInt(price) < 2000){
+                            var address = new BMap.Point(point.lng, point.lat);
+                            addMarker(address, greenIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                        }else if(parseInt(price) < 4000){
+                            var address = new BMap.Point(point.lng, point.lat);
+                            addMarker(address, blueIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                        }else if(parseInt(price) < 6000){
+                            var address = new BMap.Point(point.lng, point.lat);
+                            addMarker(address, yellowIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                        }else if(parseInt(price) < 8000){
+                            var address = new BMap.Point(point.lng, point.lat);
+                            addMarker(address, pinkIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                        }else{
+                            var address = new BMap.Point(point.lng, point.lat);
+                            addMarker(address, redIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                        }
+                    }
                 }else{
-                    var address = new BMap.Point(point.lng, point.lat);
-                    addMarker(address, redIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                    if(parseInt(price) < 2000){
+                        var address = new BMap.Point(point.lng, point.lat);
+                        addMarker(address, greenIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                    }else if(parseInt(price) < 4000){
+                        var address = new BMap.Point(point.lng, point.lat);
+                        addMarker(address, blueIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                    }else if(parseInt(price) < 6000){
+                        var address = new BMap.Point(point.lng, point.lat);
+                        addMarker(address, yellowIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                    }else if(parseInt(price) < 8000){
+                        var address = new BMap.Point(point.lng, point.lat);
+                        addMarker(address, pinkIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                    }else{
+                        var address = new BMap.Point(point.lng, point.lat);
+                        addMarker(address, redIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
+                    }
                 }
             }
         }, "上海市");
+    }
+
+    //getpoint lng and lat
+    function getPoint(add) {
+        myGeo.getPoint(add, function (point) {
+            centerPoint = point;
+        })
+    }
+
+    function getDistance(point1, point2) {
+        console.log(point1.lng+","+point1.lat);
+        console.log(point2.lng+","+point2.lat);
+        console.log((map.getDistance(point1, point2)).toFixed(1));
+        return (map.getDistance(point1, point2)).toFixed(1);
     }
     
     //init
@@ -133,6 +173,7 @@ $(document).ready(function () {
     });
     //submit
     $("#submit-data").on("click", function () {
+        var level = 1;
         dataSource = $("#data-source").val();
         lowPrice = $('#low-price').val().trim();
         highPrice = $('#high-price').val().trim();
@@ -166,7 +207,15 @@ $(document).ready(function () {
                 // alert('成功');
                 console.log(data);
                 adds = data.houseDTOList;
-                bdGEO();
+                console.log(level);
+                console.log(mapLevel);
+                if( mapLevel > level){
+                    index = 0;
+                    map.clearOverlays();
+                    bdGEO();
+                }
+
+                level = mapLevel;
             },
             error: function () {
                 //请求失败，弹出框
@@ -176,48 +225,16 @@ $(document).ready(function () {
         });
 
     });
-    /*baidu map */
-    // var index = 0;
-    // var myGeo = new BMap.Geocoder();
-    // var adds = [
-    //     "包河区金寨路1号（金寨路与望江西路交叉口）",
-    //     "庐阳区凤台路209号（凤台路与蒙城北路交叉口）",
-    //     "蜀山区金寨路217号(近安医附院公交车站)",
-    //     "蜀山区梅山路10号(近安徽饭店) ",
-    //     "蜀山区 长丰南路159号铜锣湾广场312室",
-    //     "合肥市寿春路93号钱柜星乐町KTV（逍遥津公园对面）",
-    //     "庐阳区长江中路177号",
-    //     "新站区胜利路89"
-    // ];
-    // function bdGEO(){
-    //     var add = adds[index];
-    //     geocodeSearch(add);
-    //     index++;
-    // }
-    // function geocodeSearch(add){
-    //     if(index < adds.length){
-    //         setTimeout(window.bdGEO,400);
-    //     }
-    //     myGeo.getPoint(add, function(point){
-    //         if (point) {
-    //             document.getElementById("result").innerHTML +=  index + "、" + add + ":" + point.lng + "," + point.lat + "</br>";
-    //             var address = new BMap.Point(point.lng, point.lat);
-    //             addMarker(address,new BMap.Label(index+":"+add,{offset:new BMap.Size(20,-10)}));
-    //         }
-    //     }, "合肥市");
-    // }
-    // 编写自定义函数,创建标注
-    // function addMarker(point,label){
-    //     var marker = new BMap.Marker(point);
-    //     map.addOverlay(marker);
-    //     marker.setLabel(label);
-    // }
     map.addEventListener("zoomend", function(){
         dataSource = $("#data-source").val();
         lowPrice = $('#low-price').val().trim();
         highPrice = $('#high-price').val().trim();
         workPlace = $('#workplace').val().trim();
         mapLevel = map.getZoom();
+        console.log("work"+workPlace);
+        if(workPlace !== null && workPlace!== ''){
+            getPoint(workPlace);
+        }
         if(dataSource === '1'){
             isAnjuke = false;
             isPersonal = false;
@@ -228,34 +245,42 @@ $(document).ready(function () {
             isAnjuke = true;
             isPersonal = false;
         }
-        //发送ajax 请求
-        $.ajax({
-            url:'/zhaofang',
-            type :'POST',
-            data: {
-                'dataSource' : dataSource,
-                'lowPrice' : lowPrice,
-                'highPrice' : highPrice,
-                'workPlace' : workPlace,
-                'mapLevel' : mapLevel,
-                'isAnjuke' : isAnjuke,
-                'isPersonal' : isPersonal
-            },
-            success: function (data) {
-                //请求成功，对数据进行处理
-                console.log(data);
-                index = 0;
-                adds = data.houseDTOList;
-                bdGEO();
-                // alert('成功');
-            },
-            error: function () {
-                //请求失败，弹出框
-                // alert('失败');
-                console.log("error");
-            }
+        if(level < mapLevel || location !== dataSource){
+            console.log(level);
+            console.log(mapLevel);
+            console.log(location);
+            console.log(dataSource);
+            //发送ajax 请求
+            $.ajax({
+                url:'/zhaofang',
+                type :'POST',
+                data: {
+                    'dataSource' : dataSource,
+                    'lowPrice' : lowPrice,
+                    'highPrice' : highPrice,
+                    'workPlace' : workPlace,
+                    'mapLevel' : mapLevel,
+                    'isAnjuke' : isAnjuke,
+                    'isPersonal' : isPersonal
+                },
+                success: function (data) {
+                    //请求成功，对数据进行处理
+                    console.log(data);
+                    adds = data.houseDTOList;
+                    index = 0;
+                    map.clearOverlays();
+                    level = mapLevel;
+                    location = dataSource;
+                    bdGEO();
+                    // alert('成功');
+                },
+                error: function () {
+                    //请求失败，弹出框
+                    // alert('失败');
+                    console.log("error");
+                }
 
-        });
-
+            });
+        }
     });
 });

@@ -47,7 +47,7 @@
                     <input type="text" class="form-control col-md-7" id="workplace">
                 </div>
                 <div class="row">
-                    <button type="submit" class="btn btn-primary col-md-5" id="submit-data">查找</button>
+                    <button type="button" class="btn btn-primary col-md-5" id="submit-data">查找</button>
                 </div>
             </div>
         </form>

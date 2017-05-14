@@ -42,6 +42,10 @@ public class HouseDAOImpl  implements IHouseDAO {
 
     private final String COUNT = "LIMIT 0,#";
 
+    private final String INCLUDE_58_OR_ANJUKE = "AND rental_house_link like '#' ";
+
+    private final String PERSONAL_HOUSE = "AND rental_house_personal=# ";
+
     private List<HouseDTO> houseDTO = new ArrayList<>();
 
     private ComboPooledDataSource dataSource;
@@ -61,7 +65,7 @@ public class HouseDAOImpl  implements IHouseDAO {
     @Override
     public DataQueryVOPage searchFiveEight(SearchCriteriaDTO searchCriteriaDTO) {
         int count = dataCount(searchCriteriaDTO.getMapLevel());
-        count *= 0.01;
+//        count *= 0.01;
         Calendar calendar=Calendar.getInstance();
         calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
         Date date1=calendar.getTime();//date就是你需要的时间
@@ -71,7 +75,7 @@ public class HouseDAOImpl  implements IHouseDAO {
         String lowPrice = searchCriteriaDTO.getLowPrice();
         String highPrice = searchCriteriaDTO.getHighPrice();
         StringBuilder stringBuffer = new StringBuilder();
-        stringBuffer.append(MAIN_SQL).append(RENTAL_DATE.replace("#",date.toString()));
+        stringBuffer.append(MAIN_SQL).append(RENTAL_DATE.replace("#",date.toString())).append(INCLUDE_58_OR_ANJUKE.replace("#","%58.com%"));
         if(lowPrice != null && !"".equals(lowPrice)){
             stringBuffer.append(HOUSE_PRICE);
             if(highPrice != null && !"".equals(highPrice))
@@ -101,7 +105,38 @@ public class HouseDAOImpl  implements IHouseDAO {
      */
     @Override
     public DataQueryVOPage searchFiveEightPersonal(SearchCriteriaDTO searchCriteriaDTO) {
-        return new DataQueryVOPage();
+        int count = dataCount(searchCriteriaDTO.getMapLevel());
+//        count *= 0.01;
+        Calendar calendar=Calendar.getInstance();
+        calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
+        Date date1=calendar.getTime();//date就是你需要的时间
+//        java.sql.Date date = DateFormat.format(date1);
+        java.sql.Date date = DateFormat.format(new java.util.Date());
+        List<HouseDTO> houseDTOs = new ArrayList<>();
+        String lowPrice = searchCriteriaDTO.getLowPrice();
+        String highPrice = searchCriteriaDTO.getHighPrice();
+        StringBuilder stringBuffer = new StringBuilder();
+        stringBuffer.append(MAIN_SQL).append(RENTAL_DATE.replace("#",date.toString())).append(INCLUDE_58_OR_ANJUKE.replace("#","%58.com%")).append(PERSONAL_HOUSE.replace("#","1"));
+        if(lowPrice != null && !"".equals(lowPrice)){
+            stringBuffer.append(HOUSE_PRICE);
+            if(highPrice != null && !"".equals(highPrice))
+                stringBuffer.append(LOW_PRICE.replace("#",lowPrice)).append(HOUSE_PRICE).append(HIGH_PRICE.replace("#",highPrice));
+            else
+                stringBuffer.append(LOW_PRICE.replace("#",lowPrice));
+        }else if(highPrice != null && !"".equals(highPrice)){
+            stringBuffer.append(HOUSE_PRICE).append(HIGH_PRICE.replace("#",highPrice));
+        }
+        stringBuffer.append(COUNT.replace("#",String.valueOf(count)));
+        System.out.println(stringBuffer.toString());
+        try {
+//            String SQL = "SELECT * FROM 58housedata WHERE rental_house_date='" + date + "' LIMIT 0," + count;
+            houseDTOs = jdbcTemplate.query(stringBuffer.toString(), new HouseMapper());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        DataQueryVOPage dataQueryVOPage = new DataQueryVOPage();
+        dataQueryVOPage.setHouseDTOList(houseDTOs);
+        return dataQueryVOPage;
     }
 
     /**
@@ -111,7 +146,38 @@ public class HouseDAOImpl  implements IHouseDAO {
      */
     @Override
     public DataQueryVOPage searchAnJuKe(SearchCriteriaDTO searchCriteriaDTO) {
-        return new DataQueryVOPage();
+        int count = dataCount(searchCriteriaDTO.getMapLevel());
+        count *= 0.01;
+        Calendar calendar=Calendar.getInstance();
+        calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
+        Date date1=calendar.getTime();//date就是你需要的时间
+//        java.sql.Date date = DateFormat.format(date1);
+        java.sql.Date date = DateFormat.format(new java.util.Date());
+        List<HouseDTO> houseDTOs = new ArrayList<>();
+        String lowPrice = searchCriteriaDTO.getLowPrice();
+        String highPrice = searchCriteriaDTO.getHighPrice();
+        StringBuilder stringBuffer = new StringBuilder();
+        stringBuffer.append(MAIN_SQL).append(RENTAL_DATE.replace("#",date.toString())).append(INCLUDE_58_OR_ANJUKE.replace("#","%anjuke.com%"));
+        if(lowPrice != null && !"".equals(lowPrice)){
+            stringBuffer.append(HOUSE_PRICE);
+            if(highPrice != null && !"".equals(highPrice))
+                stringBuffer.append(LOW_PRICE.replace("#",lowPrice)).append(HOUSE_PRICE).append(HIGH_PRICE.replace("#",highPrice));
+            else
+                stringBuffer.append(LOW_PRICE.replace("#",lowPrice));
+        }else if(highPrice != null && !"".equals(highPrice)){
+            stringBuffer.append(HOUSE_PRICE).append(HIGH_PRICE.replace("#",highPrice));
+        }
+        stringBuffer.append(COUNT.replace("#",String.valueOf(count)));
+        System.out.println(stringBuffer.toString());
+        try {
+//            String SQL = "SELECT * FROM 58housedata WHERE rental_house_date='" + date + "' LIMIT 0," + count;
+            houseDTOs = jdbcTemplate.query(stringBuffer.toString(), new HouseMapper());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        DataQueryVOPage dataQueryVOPage = new DataQueryVOPage();
+        dataQueryVOPage.setHouseDTOList(houseDTOs);
+        return dataQueryVOPage;
     }
 
     @Override

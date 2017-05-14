@@ -6,3 +6,7 @@
 2017-05-14 22:31:02  [ pool-1-thread-1:4822 ] - [ ERROR ]  insert to db error: Incorrect string value: '\xE4\xBC\x97\xE4\xBC\x97...' for column 'rental_house_message' at row 1
 2017-05-14 22:31:03  [ pool-1-thread-1:5069 ] - [ ERROR ]  insert to db error: Incorrect string value: '\xE9\x80\x9A\xE6\xB2\xB3...' for column 'rental_house_message' at row 1
 2017-05-14 22:31:03  [ pool-1-thread-1:5373 ] - [ ERROR ]  insert to db error: Incorrect string value: '\xE4\xB8\xB0\xE8\x88\x8D...' for column 'rental_house_message' at row 1
+2017-05-14 16:13:18  [ pool-4-thread-1:96895 ] - [ ERROR ]  connect to db error: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2017-05-14 16:13:18  [ pool-4-thread-1:96897 ] - [ ERROR ]  insert to db error: null
