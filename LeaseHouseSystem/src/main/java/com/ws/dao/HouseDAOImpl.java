@@ -65,12 +65,12 @@ public class HouseDAOImpl  implements IHouseDAO {
         Calendar calendar=Calendar.getInstance();
         calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
         Date date1=calendar.getTime();//date就是你需要的时间
-        java.sql.Date date = DateFormat.format(date1);
-//        java.sql.Date date = DateFormat.format(new java.util.Date());
+//        java.sql.Date date = DateFormat.format(date1);
+        java.sql.Date date = DateFormat.format(new java.util.Date());
         List<HouseDTO> houseDTOs = new ArrayList<>();
         String lowPrice = searchCriteriaDTO.getLowPrice();
         String highPrice = searchCriteriaDTO.getHighPrice();
-        StringBuffer stringBuffer = new StringBuffer();
+        StringBuilder stringBuffer = new StringBuilder();
         stringBuffer.append(MAIN_SQL).append(RENTAL_DATE.replace("#",date.toString()));
         if(lowPrice != null && !"".equals(lowPrice)){
             stringBuffer.append(HOUSE_PRICE);

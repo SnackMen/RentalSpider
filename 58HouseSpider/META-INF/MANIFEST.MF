@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.ws.dto2domain.DTO2Domain
+
