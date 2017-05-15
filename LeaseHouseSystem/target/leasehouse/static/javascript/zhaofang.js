@@ -77,9 +77,9 @@ $(document).ready(function () {
         }
         myGeo.getPoint(add, function(point){
             if (point) {
+                console.log(workPlace);
+                console.log(centerPoint);
                 if(workPlace!== null && workPlace!== '' && centerPoint !== null && centerPoint!== 'undefined'){
-                    console.log(workPlace);
-                    console.log(centerPoint);
                     if(getDistance(centerPoint, point) <= 6000){
                         if(parseInt(price) < 2000){
                             var address = new BMap.Point(point.lng, point.lat);
@@ -98,7 +98,7 @@ $(document).ready(function () {
                             addMarker(address, redIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));
                         }
                     }
-                }else{
+                }else if(workPlace === '' | workPlace === null){
                     if(parseInt(price) < 2000){
                         var address = new BMap.Point(point.lng, point.lat);
                         addMarker(address, greenIcon, new BMap.InfoWindow("<a href='"+link+"' target='_blank'>"+message+"</a> <br> <label>"+price+"</label>"));

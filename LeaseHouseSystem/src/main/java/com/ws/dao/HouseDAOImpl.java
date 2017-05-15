@@ -67,10 +67,10 @@ public class HouseDAOImpl  implements IHouseDAO {
         int count = dataCount(searchCriteriaDTO.getMapLevel());
 //        count *= 0.01;
         Calendar calendar=Calendar.getInstance();
-        calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
+        calendar.set(2017, Calendar.MAY, 14, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
         Date date1=calendar.getTime();//date就是你需要的时间
-//        java.sql.Date date = DateFormat.format(date1);
-        java.sql.Date date = DateFormat.format(new java.util.Date());
+        java.sql.Date date = DateFormat.format(date1);
+//        java.sql.Date date = DateFormat.format(new java.util.Date());
         List<HouseDTO> houseDTOs = new ArrayList<>();
         String lowPrice = searchCriteriaDTO.getLowPrice();
         String highPrice = searchCriteriaDTO.getHighPrice();
@@ -108,10 +108,10 @@ public class HouseDAOImpl  implements IHouseDAO {
         int count = dataCount(searchCriteriaDTO.getMapLevel());
 //        count *= 0.01;
         Calendar calendar=Calendar.getInstance();
-        calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
+        calendar.set(2017, Calendar.MAY, 14, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
         Date date1=calendar.getTime();//date就是你需要的时间
-//        java.sql.Date date = DateFormat.format(date1);
-        java.sql.Date date = DateFormat.format(new java.util.Date());
+        java.sql.Date date = DateFormat.format(date1);
+//        java.sql.Date date = DateFormat.format(new java.util.Date());
         List<HouseDTO> houseDTOs = new ArrayList<>();
         String lowPrice = searchCriteriaDTO.getLowPrice();
         String highPrice = searchCriteriaDTO.getHighPrice();
@@ -149,10 +149,10 @@ public class HouseDAOImpl  implements IHouseDAO {
         int count = dataCount(searchCriteriaDTO.getMapLevel());
         count *= 0.01;
         Calendar calendar=Calendar.getInstance();
-        calendar.set(2017, Calendar.MAY, 8, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
+        calendar.set(2017, Calendar.MAY, 14, 0, 0,0);  //年月日  也可以具体到时分秒如calendar.set(2015, 10, 12,11,32,52);
         Date date1=calendar.getTime();//date就是你需要的时间
-//        java.sql.Date date = DateFormat.format(date1);
-        java.sql.Date date = DateFormat.format(new java.util.Date());
+        java.sql.Date date = DateFormat.format(date1);
+//        java.sql.Date date = DateFormat.format(new java.util.Date());
         List<HouseDTO> houseDTOs = new ArrayList<>();
         String lowPrice = searchCriteriaDTO.getLowPrice();
         String highPrice = searchCriteriaDTO.getHighPrice();

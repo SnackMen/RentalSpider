@@ -3,6 +3,7 @@
 <%@ page contentType="text/html; charset=utf8"%>
 <html>
 <head>
+    <link rel="icon" href="../../static/pic/house.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Find Your House</title>

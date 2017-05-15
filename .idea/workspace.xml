@@ -7,21 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="216f588b-048c-44a6-9dd7-03a751a09934" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/58HouseSpider/target/test-classes/Test.class" afterPath="$PROJECT_DIR$/58HouseSpider/target/test-classes/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/dao/HouseDAOImpl.class" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/WEB-INF/classes/com/ws/dao/HouseDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/pic/house.ico" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/58HouseSpider/58HouseSpider.iml" afterPath="$PROJECT_DIR$/58HouseSpider/58HouseSpider.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/58HouseSpider/src/main/com/ws/spider/CrawlPageProgress.java" afterPath="$PROJECT_DIR$/58HouseSpider/src/main/com/ws/spider/CrawlPageProgress.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/58HouseSpider/src/test/Test.java" afterPath="$PROJECT_DIR$/58HouseSpider/src/test/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/LeaseHouseSystem.iml" afterPath="$PROJECT_DIR$/LeaseHouseSystem/LeaseHouseSystem.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp" afterPath="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/static/javascript/zhaofang.js" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/static/javascript/zhaofang.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/web/views/zhaofang.jsp" afterPath="$PROJECT_DIR$/LeaseHouseSystem/target/leasehouse/web/views/zhaofang.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
     </list>
     <ignored path="RentalSpider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,14 +73,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="zhaofang.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="zhaofang.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="84" column="71" lean-forward="false" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+            <state relative-caret-position="3052">
+              <caret line="109" column="101" lean-forward="false" selection-start-line="109" selection-start-column="101" selection-end-line="109" selection-end-column="101" />
               <folding>
-                <element signature="e#6498#7716#0" expanded="false" />
-                <element signature="e#7778#9334#0" expanded="false" />
+                <element signature="e#6532#7750#0" expanded="false" />
+                <element signature="e#7812#9368#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,8 +89,8 @@
       <file leaf-file-name="zhaofang.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-980">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="-56">
+              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -109,7 +101,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
               <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,20 +111,24 @@
       <file leaf-file-name="HouseServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/service/HouseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="868">
               <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1071#1072#0" expanded="false" />
+                <element signature="e#1111#1112#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HouseDAOImpl.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HouseDAOImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="150" column="22" lean-forward="true" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
+            <state relative-caret-position="301">
+              <caret line="158" column="57" lean-forward="true" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
               <folding>
-                <marker date="1494769433580" expanded="true" signature="8033:8076" ph="select * fro... 58housedata" />
+                <marker date="1494837952418" expanded="true" signature="8036:8079" ph="select * fro... 58housedata" />
               </folding>
             </state>
           </provider>
@@ -139,9 +137,10 @@
       <file leaf-file-name="ConnectToDomain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/domain/ConnectToDomain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
+            <state relative-caret-position="168">
               <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <marker date="1492247360764" expanded="true" signature="1785:1994" ph="insert into 58housedata... " />
               </folding>
             </state>
@@ -151,9 +150,11 @@
       <file leaf-file-name="DTO2Domain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/dto2domain/DTO2Domain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="644">
               <caret line="28" column="41" lean-forward="false" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,9 +162,13 @@
       <file leaf-file-name="CrawlPageProgress.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/spider/CrawlPageProgress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
+            <state relative-caret-position="868">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#5313#5314#0" expanded="false" />
+                <element signature="e#5340#5341#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -251,11 +256,11 @@
         <option value="dbtable:/deeed9e/92ef4171-573f-40ad-9914-53232ad8de79/rentaldata.58housedata" />
         <option value="$PROJECT_DIR$/58HouseSpider/src/main/com/ws/db.properties" />
         <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp" />
         <option value="$PROJECT_DIR$/58HouseSpider/src/test/Test.java" />
         <option value="$PROJECT_DIR$/58HouseSpider/src/main/com/ws/spider/CrawlPageProgress.java" />
-        <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" />
         <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js" />
+        <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp" />
+        <option value="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java" />
       </list>
     </option>
   </component>
@@ -371,6 +376,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -905,7 +911,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -922,22 +927,22 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\javaee\RentalSpider\LeaseHouseSystem\src\main\webapp\web\views" />
-      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/pic" />
-      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/js" />
-      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/css" />
-      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/config" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ws.dateFormate" />
-      <recent name="com.ws.dto" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/58HouseSpider/src/main/resources" />
       <recent name="$PROJECT_DIR$/58HouseSpider" />
       <recent name="$PROJECT_DIR$/58HouseSpider/src" />
       <recent name="$PROJECT_DIR$/58HouseSpider/src/main/com/ws" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ws.dateFormate" />
+      <recent name="com.ws.dto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javaee\RentalSpider\LeaseHouseSystem\src\main\webapp\static\pic" />
+      <recent name="E:\javaee\RentalSpider\LeaseHouseSystem\src\main\webapp\web\views" />
+      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/pic" />
+      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/js" />
+      <recent name="$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1735,12 +1740,13 @@
       <workItem from="1494296336516" duration="830000" />
       <workItem from="1494298934120" duration="17310000" />
       <workItem from="1494756722642" duration="7305000" />
-      <workItem from="1494745324768" duration="11789000" />
+      <workItem from="1494745324768" duration="14229000" />
+      <workItem from="1494816480518" duration="1847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195415000" />
+    <option name="totallyTimeSpent" value="199702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1753,12 +1759,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38913524" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31236205" sideWeight="0.4632196" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14164004" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1776,11 +1781,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32815966" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31236205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5022075" sideWeight="0.53678036" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3156733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16204691" sideWeight="0.48381877" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16556291" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16364606" sideWeight="0.48381877" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23454158" sideWeight="0.50993377" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2087,36 +2092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#374#375#0" expanded="false" />
-            <element signature="e#419#420#0" expanded="false" />
-            <element signature="e#452#453#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#520#521#0" expanded="false" />
-            <element signature="e#569#570#0" expanded="false" />
-            <element signature="e#606#607#0" expanded="false" />
-            <element signature="e#641#642#0" expanded="false" />
-            <element signature="e#672#673#0" expanded="false" />
-            <element signature="e#720#721#0" expanded="false" />
-            <element signature="e#760#761#0" expanded="false" />
-            <element signature="e#797#798#0" expanded="false" />
-            <element signature="e#830#831#0" expanded="false" />
-            <element signature="e#882#883#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#961#962#0" expanded="false" />
-            <element signature="e#992#993#0" expanded="false" />
-            <element signature="e#1040#1041#0" expanded="false" />
-            <element signature="e#1080#1081#0" expanded="false" />
-            <element signature="e#1116#1117#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-            <element signature="e#1198#1199#0" expanded="false" />
-            <element signature="e#1240#1241#0" expanded="false" />
-            <element signature="e#1276#1277#0" expanded="false" />
-            <element signature="e#1308#1309#0" expanded="false" />
-            <element signature="e#1358#1359#0" expanded="false" />
-            <element signature="e#1400#1401#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2137,7 +2112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="127" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2154,10 +2128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#341#342#0" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2165,7 +2135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2181,15 +2150,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/domain/ConnectToDomain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
+        <state relative-caret-position="168">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
+            <element signature="imports" expanded="false" />
             <marker date="1492247360764" expanded="true" signature="1785:1994" ph="insert into 58housedata... " />
           </folding>
         </state>
@@ -2197,9 +2166,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/dto2domain/DTO2Domain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="644">
           <caret line="28" column="41" lean-forward="false" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2211,50 +2182,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-980">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
+    <entry file="dbDummy://dbtable:/898b7adc/92ef4171-573f-40ad-9914-53232ad8de79/rentaldata.58housedata">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/898b7adc/92ef4171-573f-40ad-9914-53232ad8de79/rentaldata.58housedata">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/spider/CrawlPageProgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="150" column="22" lean-forward="true" selection-start-line="150" selection-start-column="22" selection-end-line="150" selection-end-column="22" />
-          <folding>
-            <marker date="1494769433580" expanded="true" signature="8033:8076" ph="select * fro... 58housedata" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/service/HouseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="868">
           <caret line="47" column="59" lean-forward="false" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1071#1072#0" expanded="false" />
+            <element signature="e#1111#1112#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2262,17 +2210,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/static/javascript/zhaofang.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="84" column="71" lean-forward="false" selection-start-line="84" selection-start-column="71" selection-end-line="84" selection-end-column="71" />
+        <state relative-caret-position="3052">
+          <caret line="109" column="101" lean-forward="false" selection-start-line="109" selection-start-column="101" selection-end-line="109" selection-end-column="101" />
           <folding>
-            <element signature="e#6498#7716#0" expanded="false" />
-            <element signature="e#7778#9334#0" expanded="false" />
+            <element signature="e#6532#7750#0" expanded="false" />
+            <element signature="e#7812#9368#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/58HouseSpider/src/main/com/ws/spider/CrawlPageProgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5313#5314#0" expanded="false" />
+            <element signature="e#5340#5341#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/webapp/web/views/zhaofang.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LeaseHouseSystem/src/main/java/com/ws/dao/HouseDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="158" column="57" lean-forward="true" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
+          <folding>
+            <marker date="1494837952418" expanded="true" signature="8036:8079" ph="select * fro... 58housedata" />
           </folding>
         </state>
       </provider>
